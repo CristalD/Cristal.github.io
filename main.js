@@ -82,7 +82,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll(
-  '.skill-card, .timeline__card, .edu__card, .contact-card'
+  '.skill-card, .timeline__card, .edu__card, .contact-card, .carousel__card'
 ).forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(18px)';
@@ -106,7 +106,7 @@ const navObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => navObserver.observe(s));
 
-// CERTIFICATE MODAL
+// ── CERTIFICATE MODAL ──
 const certModal        = document.getElementById('certModal');
 const certModalImg     = document.getElementById('certModalImg');
 const certModalTitle   = document.getElementById('certModalTitle');
@@ -149,5 +149,91 @@ if (certModalBackdrop) certModalBackdrop.addEventListener('click', closeCertModa
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && certModal.classList.contains('is-open')) {
     closeCertModal();
+  }
+});
+
+// ── CAROUSELS (Proyectos / Destacados) ──
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const key   = carousel.getAttribute('data-carousel');
+  const track = carousel.querySelector('.carousel__track');
+  const prevBtn = carousel.querySelector(`[data-carousel-prev="${key}"]`);
+  const nextBtn = carousel.querySelector(`[data-carousel-next="${key}"]`);
+  if (!track) return;
+
+  function cardStep() {
+    const card = track.querySelector('.carousel__card');
+    if (!card) return 300;
+    const gap = parseFloat(getComputedStyle(track).gap) || 20;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateArrows() {
+    if (!prevBtn || !nextBtn) return;
+    const maxScroll = track.scrollWidth - track.clientWidth - 4;
+    prevBtn.disabled = track.scrollLeft <= 4;
+    nextBtn.disabled = track.scrollLeft >= maxScroll;
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -cardStep(), behavior: 'smooth' });
+  });
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: cardStep(), behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+});
+
+// ── MEDIA MODAL (videos/documentos embebidos en Proyectos y Destacados) ──
+const mediaModal        = document.getElementById('mediaModal');
+const mediaModalFrame   = document.getElementById('mediaModalFrame');
+const mediaModalTitle   = document.getElementById('mediaModalTitle');
+const mediaModalClose   = document.getElementById('mediaModalClose');
+const mediaModalBackdrop = document.getElementById('mediaModalBackdrop');
+
+let lastFocusedMediaCard = null;
+
+function openMediaModal(src, title) {
+  mediaModalFrame.src = src;
+  mediaModalTitle.textContent = title;
+  mediaModal.classList.add('is-open');
+  mediaModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  mediaModalClose.focus();
+}
+
+function closeMediaModal() {
+  mediaModal.classList.remove('is-open');
+  mediaModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  mediaModalFrame.src = ''; // detiene la reproducción al cerrar
+  if (lastFocusedMediaCard) lastFocusedMediaCard.focus();
+}
+
+document.querySelectorAll('.carousel__card[data-media-type]').forEach(card => {
+  card.addEventListener('click', () => {
+    const type  = card.getAttribute('data-media-type');
+    const src   = card.getAttribute('data-media-src');
+    const title = card.getAttribute('data-title');
+
+    if (type === 'link') {
+      // Repositorio de GitHub: abre en pestaña nueva, sin modal
+      window.open(src, '_blank', 'noopener');
+      return;
+    }
+    // type === 'video' o 'doc': abre modal con iframe embebido
+    lastFocusedMediaCard = card;
+    openMediaModal(src, title);
+  });
+});
+
+if (mediaModalClose) mediaModalClose.addEventListener('click', closeMediaModal);
+if (mediaModalBackdrop) mediaModalBackdrop.addEventListener('click', closeMediaModal);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mediaModal.classList.contains('is-open')) {
+    closeMediaModal();
   }
 });
