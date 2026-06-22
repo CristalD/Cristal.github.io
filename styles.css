@@ -877,26 +877,26 @@ body {
 }
 
 @media (max-width: 640px) {
+  .cert-modal {
+    align-items: center;
+    padding: 0.5rem;
+  }
   .cert-modal__dialog--media {
-    max-height: 95vh;
-    margin: 0;
-    border-radius: var(--radius-md) var(--radius-md) 0 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    max-height: 92vh;
     width: 100%;
+    border-radius: var(--radius-md);
+  }
+  .cert-modal__header {
+    padding: 0.75rem 1rem;
   }
   .cert-modal__body--media {
     padding: 0;
   }
   .cert-modal__body--media iframe {
-    aspect-ratio: 16/9;
-    max-height: 55vh;
-  }
-  .cert-modal {
-    align-items: flex-end;
-    padding: 0;
+    width: 100%;
+    height: 240px;
+    aspect-ratio: unset;
+    max-height: unset;
   }
 }
 .instagram-embed-container {
