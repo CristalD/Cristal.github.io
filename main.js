@@ -16,12 +16,12 @@ if (navToggle && navLinks) {
 
 // ── TERMINAL TYPING ANIMATION ──
 const terminalLines = [
-  { prompt: '$', cmd: 'whoami', output: 'Cristal Campino Saavedra' },
-  { prompt: '$', cmd: 'cat rol.txt', output: 'Ingeniero TI · Analista QA Senior · BI Developer' },
-  { prompt: '$', cmd: 'ls experience/', output: 'S3Chile/  QualityFactory/  DuocUC/  SII/  Aduanas/' },
-  { prompt: '$', cmd: 'cat skills.json | grep top', output: '"QA", "Power BI", "ETL", "Selenium", "Scrum"' },
-  { prompt: '$', cmd: 'cat awards.txt', output: '⭐ FemIT — Más Mujeres en las TICs' },
-  { prompt: '$', cmd: '', output: '' },
+   { prompt: '$', cmd: 'whoami', output: 'Cristal Campino Saavedra' },
+   { prompt: '$', cmd: 'cat rol.txt', output: 'Ingeniero TI · Analista QA Senior · · Analista TI Senior' },
+   { prompt: '$', cmd: 'ls experience/', output: 'S3Chile (Banchile corredor de seguros)/  QualityFactory (Ecomsur, Aguas andinas, SII)/  DuocUC/  Datactiva (Aduanas)/' },
+   { prompt: '$', cmd: 'cat skills.json | grep top', output: '"QA", "FrontEnd", "BackEnd", "PL-SQL", "T-SQL", "Power BI", "ETL", "Selenium", "Scrum"' },
+   { prompt: '$', cmd: 'cat awards.txt', output: '⭐ FemIT — Más Mujeres en las TICs' },
+   { prompt: '$', cmd: '', output: '' },
 ];
 
 const terminalBody = document.getElementById('terminalBody');
@@ -192,16 +192,82 @@ const mediaModalFrame   = document.getElementById('mediaModalFrame');
 const mediaModalTitle   = document.getElementById('mediaModalTitle');
 const mediaModalClose   = document.getElementById('mediaModalClose');
 const mediaModalBackdrop = document.getElementById('mediaModalBackdrop');
+const instagramEmbedContainer = document.getElementById('instagramEmbedContainer');
 
 let lastFocusedMediaCard = null;
 
-function openMediaModal(src, title) {
-  mediaModalFrame.src = src;
+function openMediaModal(src, title, type) {
   mediaModalTitle.textContent = title;
   mediaModal.classList.add('is-open');
   mediaModal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
   mediaModalClose.focus();
+
+  if (type === 'instagram') {
+    mediaModalFrame.style.display = 'none';
+    mediaModalFrame.src = '';
+    instagramEmbedContainer.style.display = 'block';
+    instagramEmbedContainer.innerHTML = '';
+
+    // Construye el blockquote oficial que pide Instagram para su embed
+    const blockquote = document.createElement('blockquote');
+    blockquote.className = 'instagram-media';
+    blockquote.setAttribute('data-instgrm-permalink', src);
+    blockquote.setAttribute('data-instgrm-version', '14');
+    blockquote.style.margin = '0 auto';
+    blockquote.style.maxWidth = '540px';
+    blockquote.style.width = '100%';
+    instagramEmbedContainer.appendChild(blockquote);
+
+    // Espera a que el navegador pinte el contenedor visible antes de procesar
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => processInstagramEmbed(src));
+    });
+  } else {
+    instagramEmbedContainer.style.display = 'none';
+    instagramEmbedContainer.innerHTML = '';
+    mediaModalFrame.style.display = 'block';
+    mediaModalFrame.src = src;
+  }
+}
+
+function processInstagramEmbed(permalink) {
+  // Elimina cualquier instancia previa del script para forzar una carga limpia.
+  // El script de Instagram acumula estado interno entre usos y falla en embeds
+  // dinámicos repetidos si no se recarga desde cero.
+  const oldScript = document.getElementById('instagramEmbedScript');
+  if (oldScript) oldScript.remove();
+  delete window.instgrm;
+
+  const script = document.createElement('script');
+  script.id = 'instagramEmbedScript';
+  script.async = true;
+  script.src = 'https://www.instagram.com/embed.js';
+  script.onload = () => {
+    if (window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    } else {
+      showInstagramFallback(permalink);
+    }
+  };
+  script.onerror = () => showInstagramFallback(permalink);
+  document.body.appendChild(script);
+
+  // Si tras 4 segundos no se renderizó nada (el blockquote sigue como blockquote), muestra el respaldo
+  setTimeout(() => {
+    const stillRaw = instagramEmbedContainer.querySelector('blockquote.instagram-media');
+    if (stillRaw) showInstagramFallback(permalink);
+  }, 4000);
+}
+
+function showInstagramFallback(permalink) {
+  instagramEmbedContainer.innerHTML = `
+    <p style="text-align:center; padding:2rem; font-family:inherit; color:#444;">
+      No se pudo cargar la vista previa.
+      <a href="${permalink}" target="_blank" rel="noopener" style="color:#e1306c; font-weight:600;">
+        Ver publicación en Instagram
+      </a>
+    </p>`;
 }
 
 function closeMediaModal() {
@@ -209,6 +275,7 @@ function closeMediaModal() {
   mediaModal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
   mediaModalFrame.src = ''; // detiene la reproducción al cerrar
+  instagramEmbedContainer.innerHTML = '';
   if (lastFocusedMediaCard) lastFocusedMediaCard.focus();
 }
 
@@ -223,9 +290,9 @@ document.querySelectorAll('.carousel__card[data-media-type]').forEach(card => {
       window.open(src, '_blank', 'noopener');
       return;
     }
-    // type === 'video' o 'doc': abre modal con iframe embebido
+    // type === 'video', 'doc' o 'instagram': abre modal
     lastFocusedMediaCard = card;
-    openMediaModal(src, title);
+    openMediaModal(src, title, type);
   });
 });
 
@@ -237,3 +304,47 @@ document.addEventListener('keydown', e => {
     closeMediaModal();
   }
 });
+
+// ── MINI MUSIC PLAYER ──
+const bgAudio     = document.getElementById('bgAudio');
+const musicToggle = document.getElementById('musicToggle');
+
+if (bgAudio && musicToggle) {
+  const iconPlay  = musicToggle.querySelector('.icon-play');
+  const iconPause = musicToggle.querySelector('.icon-pause');
+
+  musicToggle.addEventListener('click', () => {
+    if (bgAudio.paused) {
+      bgAudio.play().catch(() => {
+        // Si el navegador bloquea la reproducción, no rompe nada
+      });
+    } else {
+      bgAudio.pause();
+    }
+  });
+
+  bgAudio.addEventListener('play', () => {
+    musicToggle.setAttribute('aria-pressed', 'true');
+    musicToggle.setAttribute('aria-label', 'Pausar música');
+    iconPlay.style.display = 'none';
+    iconPause.style.display = 'block';
+  });
+
+  bgAudio.addEventListener('pause', () => {
+    musicToggle.setAttribute('aria-pressed', 'false');
+    musicToggle.setAttribute('aria-label', 'Reproducir música');
+    iconPlay.style.display = 'block';
+    iconPause.style.display = 'none';
+  });
+
+  // Si se abre un modal con video, pausa la música de fondo para no encimar audios
+  [mediaModal, certModal].forEach(modal => {
+    if (!modal) return;
+    const obs = new MutationObserver(() => {
+      if (modal.classList.contains('is-open') && !bgAudio.paused) {
+        bgAudio.pause();
+      }
+    });
+    obs.observe(modal, { attributes: true, attributeFilter: ['class'] });
+  });
+}

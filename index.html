@@ -15,698 +15,756 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="top">
-    <a href="#top" class="nav__logo">
-      <span class="logo-bracket">&lt;</span>Cristal<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span>
-    </a>
-    <button class="nav__toggle" id="navToggle" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav__links" id="navLinks">
-      <a href="#about">Sobre mí</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experiencia</a>
-      <a href="#education">Educación</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#highlights">Destacados</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero__content">
-      <p class="hero__greeting">¡Hola! Soy</p>
-      <h1 class="hero__name">Cristal Campino</h1>
-      <div class="hero__roles">
-        <span class="role-tag">Ingeniero TI</span>
-        <span class="role-sep">·</span>
-        <span class="role-tag">Analista QA Senior</span>
-        <span class="role-sep">·</span>
-        <span class="role-tag">BI Developer</span>
-      </div>
-      <p class="hero__location">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Santiago, Chile
-      </p>
-      <p class="hero__bio">
-        Profesional TI con más de 10 años de experiencia en <strong>Testing & QA</strong>,
-        <strong>Business Intelligence</strong> y gestión de incidentes. Líder en comunidad FemIT,
-        impulsando el rol de la mujer en tecnología.
-      </p>
-      <div class="hero__actions">
-        <a href="mailto:dqacristal@gmail.com" class="btn btn--primary">Contáctame</a>
-        <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
-      </div>
-      <div class="hero__socials">
-        <a href="mailto:dqacristal@gmail.com" aria-label="Email" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    <!-- NAV -->
+    <header class="nav" id="top">
+        <a href="#top" class="nav__logo">
+            <span class="logo-bracket">&lt;</span>Cristal<span class="logo-dot">.</span>dev<span class="logo-bracket">/&gt;</span>
         </a>
-        <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="tel:+56950839340" aria-label="Teléfono" class="social-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero__terminal" aria-hidden="true">
-      <div class="terminal">
-        <div class="terminal__bar">
-          <span class="dot dot--red"></span>
-          <span class="dot dot--yellow"></span>
-          <span class="dot dot--green"></span>
-          <span class="terminal__title">cristal@portfolio ~ </span>
-        </div>
-        <div class="terminal__body" id="terminalBody"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Sobre mí</h2>
-      <div class="about__grid">
-        <div class="about__avatar">
-          <div class="avatar-ring">
-            <img src="img/cristal.png" alt="Cristal Campino" class="avatar-img">
-          </div>
-          <div class="femit-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-            FemIT Leader
-          </div>
-        </div>
-        <div class="about__text">
-          <p>Soy una profesional TI con más de <strong>10 años de experiencia</strong> enfocada en asegurar la calidad del software, análisis de datos y liderazgo técnico.</p>
-          <p>Trabajo bajo metodologías ágiles como <strong>Scrum, DevOps, TDD y BDD</strong>, con experiencia en proyectos de alta complejidad en sectores como finanzas, aduanas y medio ambiente.</p>
-          <p>Soy líder en la comunidad <strong>FemIT</strong>, donde me dedico a concientizar sobre el rol de la mujer en la industria tecnológica y a motivar a nuevas generaciones de profesionales.</p>
-          <div class="about__certs">
-            <h3>Certificaciones</h3>
-            <ul class="cert-list">
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                Análisis y Desarrollo de Modelos de Datos
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                Programación de Software
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                Inteligencia de Negocios
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                Inglés Intermedio (Internacional)
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-                Gestión de Proyectos Informáticos
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section section--alt" id="skills">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Skills</h2>
-      <p class="section__subtitle">Experta en aseguramiento de calidad, datos e infraestructura moderna.</p>
-
-      <div class="skills__terminal" aria-label="Lista de habilidades en formato terminal">
-        <div class="terminal">
-          <div class="terminal__bar">
-            <span class="dot dot--red"></span>
-            <span class="dot dot--yellow"></span>
-            <span class="dot dot--green"></span>
-            <span class="terminal__title">cristal@skills ~ </span>
-          </div>
-          <div class="terminal__body terminal__body--static">
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ls testing</span></p>
-            <p class="t-output">Selenium, Jira, TestLink, Redmine, OWASP, TDD, BDD, ISTQB</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ls programming</span></p>
-            <p class="t-output">Python, JavaScript, C#, Java, HTML, CSS, .NET</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ls data</span></p>
-            <p class="t-output">Power BI, ETL, PL-SQL, T-SQL, MySQL, Control-M</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ls methodologies</span></p>
-            <p class="t-output">Scrum, DevOps, Agile, Waterfall</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ls tools</span></p>
-            <p class="t-output">VS Code, Git, GitHub, Eclipse, Postman, Office 365</p>
-            <p class="t-cursor">█</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills__grid">
-        <div class="skill-card">
-          <div class="skill-card__icon qa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3>Quality Assurance</h3>
-          <div class="tag-group">
-            <span class="tag">Selenium</span><span class="tag">TestLink</span><span class="tag">Jira</span><span class="tag">Redmine</span><span class="tag">OWASP</span><span class="tag">TDD</span><span class="tag">BDD</span><span class="tag">ISTQB</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon bi">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          </div>
-          <h3>Business Intelligence</h3>
-          <div class="tag-group">
-            <span class="tag">Power BI</span><span class="tag">ETL</span><span class="tag">PL-SQL</span><span class="tag">T-SQL</span><span class="tag">MySQL</span><span class="tag">Control-M</span><span class="tag">.NET</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon dev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-          </div>
-          <h3>Desarrollo</h3>
-          <div class="tag-group">
-            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">C#</span><span class="tag">Java</span><span class="tag">HTML</span><span class="tag">CSS</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card__icon ops">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
-          </div>
-          <h3>Metodologías</h3>
-          <div class="tag-group">
-            <span class="tag">Scrum</span><span class="tag">DevOps</span><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Git</span><span class="tag">GitHub</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Experiencia</h2>
-
-      <div class="timeline">
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Analista de Soporte TI</h3>
-                <p class="timeline__company">S3Chile · Banchile Seguros</p>
-              </div>
-              <span class="timeline__date">Sept 2025 – Presente</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Soporte y gestión de incidentes en sistemas de Banchile Seguros.</li>
-              <li>Análisis y mantención de procesos coordinando con áreas técnicas y de negocio.</li>
-              <li>Creación y mantención de productos/planes de seguros en entorno productivo.</li>
-              <li>Liderazgo de equipo QA para entorno de pruebas.</li>
-              <li>Manejo de ETL, PL-SQL y T-SQL.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">ETL</span><span class="tag">PL-SQL</span><span class="tag">T-SQL</span><span class="tag">QA Lead</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Analista de TI</h3>
-                <p class="timeline__company">S3Chile · Banchile Seguros</p>
-              </div>
-              <span class="timeline__date">Abr 2022 – Presente</span>
-            </div>
-            <ul class="timeline__list">
-              <li>QA para desarrollos nuevos y correcciones de incidentes.</li>
-              <li>Control y certificación de procesos con Control-M.</li>
-              <li>Business Intelligence: reportes estratégicos y dashboards dinámicos en Power BI.</li>
-              <li>Detección y análisis diario de incidentes en plataformas de la corredora.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">Power BI</span><span class="tag">Control-M</span><span class="tag">QA</span><span class="tag">ETL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Capacitador de Automatización & Analista QA</h3>
-                <p class="timeline__company">QualityFactory · Ecomsur</p>
-              </div>
-              <span class="timeline__date">May 2021 – Ene 2022</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Capacitación de profesionales en testing y automatización de pruebas.</li>
-              <li>Proyectos de sistemas WMS, OMS y marketplaces de Ecomsur.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">Automatización</span><span class="tag">WMS</span><span class="tag">OMS</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Docente Taller de Robótica</h3>
-                <p class="timeline__company">Duoc UC · Fundación</p>
-              </div>
-              <span class="timeline__date">Oct 2021 – Dic 2021</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Profesora de taller de robótica para estudiantes del Liceo Politécnico Andes.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">Docencia</span><span class="tag">Robótica</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Analista QA</h3>
-                <p class="timeline__company">Quality Factory · Aguas Andinas / Suez</p>
-              </div>
-              <span class="timeline__date">Oct 2019 – Mar 2020</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Aseguramiento de Desarrollo Seguro de Software con OWASP Top 10.</li>
-              <li>Detección automatizada de vulnerabilidades en código.</li>
-              <li>Creación de planes de prueba e informes de hallazgos.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">OWASP</span><span class="tag">Seguridad</span><span class="tag">Automatización</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Analista QA</h3>
-                <p class="timeline__company">Servicio de Impuestos Internos (SII)</p>
-              </div>
-              <span class="timeline__date">Oct 2015 – Ene 2016</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Proyecto "Solicitud Devolución Cambio Sujeto".</li>
-              <li>Creación y ejecución de pautas de pruebas, informes de evidencia e incidencias.</li>
-              <li>Control de mantenciones con Jira.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">Jira</span><span class="tag">Funcional</span><span class="tag">Reporting</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__card">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__role">Testing & Analista QA</h3>
-                <p class="timeline__company">Servicio Nacional de Aduanas</p>
-              </div>
-              <span class="timeline__date">Dic 2014 – Ago 2015</span>
-            </div>
-            <ul class="timeline__list">
-              <li>Testing funcional en sistemas DECARE y SIDEMAR.</li>
-              <li>Creación de planes, casos de prueba e informes de testing.</li>
-              <li>Gestión del workflow de seguimiento de bugs.</li>
-            </ul>
-            <div class="tag-group tag-group--sm">
-              <span class="tag">Funcional</span><span class="tag">Bug Tracking</span><span class="tag">Documentación</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section section--alt" id="education">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Educación</h2>
-      <p class="edu__hint">Toca cualquier título para ver el certificado</p>
-      <div class="edu__grid">
-        <button type="button" class="edu__card" data-cert="img/certificado-ingenieria.png" data-title="Ingeniería en Informática">
-          <div class="edu__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
-          </div>
-          <div class="edu__content">
-            <h3>Ingeniería Informática</h3>
-            <p class="edu__school">Duoc UC</p>
-            <span class="edu__date">2018 – 2021</span>
-          </div>
-          <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Ver título</span>
+        <button class="nav__toggle" id="navToggle" aria-label="Menú">
+            <span></span><span></span><span></span>
         </button>
-        <button type="button" class="edu__card" data-cert="img/certificado-analista.png" data-title="Analista Programador Computacional">
-          <div class="edu__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
-          </div>
-          <div class="edu__content">
-            <h3>Analista Programador Computacional</h3>
-            <p class="edu__school">Duoc UC</p>
-            <span class="edu__date">2018 – 2020</span>
-          </div>
-          <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Ver título</span>
-        </button>
-        <button type="button" class="edu__card" data-cert="img/certificado-telecomunicaciones.png" data-title="Técnico de Nivel Medio en Telecomunicaciones">
-          <div class="edu__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
-          </div>
-          <div class="edu__content">
-            <h3>Técnico en Telecomunicaciones — Redes y Programación</h3>
-            <p class="edu__school">Duoc UC</p>
-            <span class="edu__date">2011 – 2014</span>
-          </div>
-          <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg> Ver título</span>
-        </button>
-      </div>
+        <nav class="nav__links" id="navLinks">
+            <a href="#about">Sobre mí</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experiencia</a>
+            <a href="#education">Educación</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#highlights">Destacados</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
 
-      <div class="award">
-        <div class="award__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <p class="hero__greeting">¡Hola! Soy</p>
+            <h1 class="hero__name">Cristal Campino</h1>
+            <div class="hero__roles">
+                <span class="role-tag">Ingeniero TI</span>
+                <span class="role-sep">·</span>
+                <span class="role-tag">Analista QA Senior</span>
+                <span class="role-sep">·</span>
+                <span class="role-tag">Analista TI Senior</span>
+            </div>
+            <p class="hero__location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" /></svg>
+                Santiago, Chile
+            </p>
+            <p class="hero__bio">
+                Ingeniera en Informática con más de 9 años de experiencia en <strong>QA, PL-SQL, T-SQL</strong>,
+                <strong>análisis de sistemas TI</strong>, soporte y gestión de incidentes. Líder en comunidad FemIT,
+                impulsando el rol de la mujer en tecnología.
+            </p>
+            <div class="hero__actions">
+                <a href="mailto:dqacristal@gmail.com" class="btn btn--primary">Contáctame</a>
+                <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn</a>
+            </div>
+            <div class="hero__socials">
+                <a href="mailto:dqacristal@gmail.com" aria-label="Email" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                </a>
+                <a href="tel:+56950839340" aria-label="Teléfono" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                </a>
+            </div>
         </div>
-        <div>
-          <h3>Reconocimiento FemIT</h3>
-          <p>Premio de la comunidad FemIT dentro del programa <strong>"Más Mujeres en las TICs"</strong> — líder en concientización sobre el rol de la mujer en la industria tecnológica.</p>
+        <div class="hero__terminal" aria-hidden="true">
+            <div class="terminal">
+                <div class="terminal__bar">
+                    <span class="dot dot--red"></span>
+                    <span class="dot dot--yellow"></span>
+                    <span class="dot dot--green"></span>
+                    <span class="terminal__title">cristal@portfolio ~ </span>
+                </div>
+                <div class="terminal__body" id="terminalBody"></div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!--
-    ════════════════════════════════════════════════════════════
-    SECCIÓN PROYECTOS — guía para reemplazar placeholders
-    ════════════════════════════════════════════════════════════
-    Cada tarjeta es un <button class="carousel__card"> con 3 atributos data-*:
-
-      data-media-type   = "video" | "doc" | "link"
-                           "video" → abre modal con reproductor embebido (YouTube/Drive)
-                           "doc"   → abre modal mostrando documento embebido (Google Drive/PDF)
-                           "link"  → abre el repositorio de GitHub en una pestaña nueva (sin modal)
-
-      data-media-src    = URL del video/documento embebido, o del repo si es type="link"
-                           Para YouTube: usa el link de "Insertar" tipo
-                             https://www.youtube.com/embed/ID_DEL_VIDEO
-                           Para Google Drive (video o doc): usa el link de "Insertar"
-                             https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview
-                           Para GitHub (type="link"): la URL normal del repo
-                             https://github.com/TU_USUARIO/nombre-repo
-
-      data-title        = Título que aparece en el modal
-
-    La imagen (data-img / <img src>) es la miniatura de la tarjeta — usa tus propias imágenes en img/proyectos/
-    Hay 7 tarjetas de ejemplo: 3 video, 2 doc, 2 link. Reemplaza textos, imágenes y links según corresponda.
-  -->
-  <section class="section" id="projects">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Proyectos</h2>
-      <p class="section__subtitle">Una selección de trabajos, demos y repositorios.</p>
-
-      <div class="carousel" data-carousel="projects">
-        <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Anterior" data-carousel-prev="projects">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-
-        <div class="carousel__track" id="projectsTrack">
-
-          <!-- PROYECTO 1 — VIDEO -->
-          <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://www.youtube.com/embed/REEMPLAZAR_ID_VIDEO_1" data-title="Nombre del Proyecto 1">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/proyecto-1.jpg" alt="Proyecto 1" loading="lazy">
-              <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Sobre mí</h2>
+            <div class="about__grid">
+                <div class="about__avatar">
+                    <div class="avatar-ring">
+                        <img src="img/foto.png" alt="Cristal Campino" class="avatar-img">
+                    </div>
+                    <div class="femit-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" /></svg>
+                        FemIT Leader
+                    </div>
+                </div>
+                <div class="about__text">
+                    <p>Soy una profesional TI con más de <strong>9 años de experiencia</strong> enfocada en asegurar la calidad del software, análisis de datos y liderazgo técnico.</p>
+                    <p>Trabajo bajo metodologías ágiles como <strong>Scrum, DevOps, TDD y BDD</strong>, con experiencia en proyectos de alta complejidad en sectores como de seguros, retail, logística y sector público.</p>
+                    <p>Soy líder en la comunidad <strong>FemIT</strong>, donde me dedico a concientizar sobre el rol de la mujer en la industria tecnológica y a motivar a nuevas generaciones de profesionales.</p>
+                    <div class="about__certs">
+                        <h3>Certificaciones</h3>
+                        <ul class="cert-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                Análisis y Desarrollo de Modelos de Datos
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                Programación de Software
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                Inteligencia de Negocios
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                Inglés Intermedio (Internacional)
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                Gestión de Proyectos Informáticos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="carousel__body">
-              <h3>Nombre del Proyecto 1</h3>
-              <p>Breve descripción del proyecto: qué problema resuelve y qué tecnologías usaste.</p>
-              <span class="carousel__tag carousel__tag--video">Video</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 2 — VIDEO -->
-          <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://www.youtube.com/embed/REEMPLAZAR_ID_VIDEO_2" data-title="Nombre del Proyecto 2">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/proyecto-2.jpg" alt="Proyecto 2" loading="lazy">
-              <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Proyecto 2</h3>
-              <p>Breve descripción del proyecto: qué problema resuelve y qué tecnologías usaste.</p>
-              <span class="carousel__tag carousel__tag--video">Video</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 3 — VIDEO -->
-          <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://www.youtube.com/embed/REEMPLAZAR_ID_VIDEO_3" data-title="Nombre del Proyecto 3">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/proyecto-3.jpg" alt="Proyecto 3" loading="lazy">
-              <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Proyecto 3</h3>
-              <p>Breve descripción del proyecto: qué problema resuelve y qué tecnologías usaste.</p>
-              <span class="carousel__tag carousel__tag--video">Video</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 4 — DOCUMENTO -->
-          <button type="button" class="carousel__card" data-media-type="doc" data-media-src="https://drive.google.com/file/d/REEMPLAZAR_ID_DOCUMENTO_1/preview" data-title="Nombre del Documento 1">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/documento-1.jpg" alt="Documento 1" loading="lazy">
-              <span class="carousel__play carousel__play--doc"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m-7 5h8a2 2 0 002-2V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Documento 1</h3>
-              <p>Breve descripción: informe, manual o documentación técnica del proyecto.</p>
-              <span class="carousel__tag carousel__tag--doc">Documento</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 5 — DOCUMENTO -->
-          <button type="button" class="carousel__card" data-media-type="doc" data-media-src="https://drive.google.com/file/d/REEMPLAZAR_ID_DOCUMENTO_2/preview" data-title="Nombre del Documento 2">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/documento-2.jpg" alt="Documento 2" loading="lazy">
-              <span class="carousel__play carousel__play--doc"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m-7 5h8a2 2 0 002-2V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Documento 2</h3>
-              <p>Breve descripción: informe, manual o documentación técnica del proyecto.</p>
-              <span class="carousel__tag carousel__tag--doc">Documento</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 6 — REPOSITORIO GITHUB -->
-          <button type="button" class="carousel__card" data-media-type="link" data-media-src="https://github.com/REEMPLAZAR_USUARIO/REEMPLAZAR_REPO_1" data-title="Nombre del Repositorio 1">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/repo-1.jpg" alt="Repositorio 1" loading="lazy">
-              <span class="carousel__play carousel__play--link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.135.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Repositorio 1</h3>
-              <p>Breve descripción: qué hace el proyecto y qué tecnologías incluye.</p>
-              <span class="carousel__tag carousel__tag--link">GitHub</span>
-            </div>
-          </button>
-
-          <!-- PROYECTO 7 — REPOSITORIO GITHUB -->
-          <button type="button" class="carousel__card" data-media-type="link" data-media-src="https://github.com/REEMPLAZAR_USUARIO/REEMPLAZAR_REPO_2" data-title="Nombre del Repositorio 2">
-            <div class="carousel__img-wrap">
-              <img src="img/proyectos/repo-2.jpg" alt="Repositorio 2" loading="lazy">
-              <span class="carousel__play carousel__play--link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.135.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Repositorio 2</h3>
-              <p>Breve descripción: qué hace el proyecto y qué tecnologías incluye.</p>
-              <span class="carousel__tag carousel__tag--link">GitHub</span>
-            </div>
-          </button>
-
         </div>
+    </section>
 
-        <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Siguiente" data-carousel-next="projects">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Skills</h2>
+            <p class="section__subtitle">Sólida base en QA, gestión de bases de datos, programación Frontend y Backend. Reconocida por su compromiso, capacidad analítica y liderazgo técnico.</p>
 
-  <!--
-    ════════════════════════════════════════════════════════════
-    SECCIÓN DESTACADOS — guía para reemplazar placeholders
-    ════════════════════════════════════════════════════════════
-    6 tarjetas en total. Mismo sistema data-* que Proyectos:
-      - 2 tarjetas con data-media-type="video" (abren modal con reproductor embebido)
-      - 4 tarjetas con data-media-type="none" (solo muestran texto + imagen, sin modal — son informativas)
-    Si alguna tarjeta "none" no debe ser clicable, puedes quitarle el atributo onclick dejándola como <div> en vez de <button>.
-  -->
-  <section class="section section--alt" id="highlights">
-    <div class="section__inner">
-      <h2 class="section__title"><span class="accent">#</span> Destacados</h2>
-      <p class="section__subtitle">Logros, reconocimientos y momentos clave.</p>
+            <div class="skills__terminal" aria-label="Lista de habilidades en formato terminal">
+                <div class="terminal">
+                    <div class="terminal__bar">
+                        <span class="dot dot--red"></span>
+                        <span class="dot dot--yellow"></span>
+                        <span class="dot dot--green"></span>
+                        <span class="terminal__title">cristal@skills ~ </span>
+                    </div>
+                    <div class="terminal__body terminal__body--static">
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls testing</span></p>
+                        <p class="t-output">Selenium, Jira, TestLink, Redmine, OWASP, TDD, BDD, ISTQB</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls programming</span></p>
+                        <p class="t-output">Python, JavaScript, C#, Java, HTML, CSS, .NET</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls data</span></p>
+                        <p class="t-output">Power BI, ETL, PL-SQL, T-SQL, Oracle, SQL Server, Control-M</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls methodologies</span></p>
+                        <p class="t-output">Scrum, DevOps, Agile, Waterfall</p>
+                        <p><span class="t-prompt">$</span> <span class="t-cmd">ls tools</span></p>
+                        <p class="t-output">VS Code, Git, GitHub, Eclipse, Postman, Office 365</p>
+                        <p class="t-cursor">█</p>
+                    </div>
+                </div>
+            </div>
 
-      <div class="carousel" data-carousel="highlights">
-        <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Anterior" data-carousel-prev="highlights">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-
-        <div class="carousel__track" id="highlightsTrack">
-
-          <!-- DESTACADO 1 — VIDEO -->
-          <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://www.youtube.com/embed/REEMPLAZAR_ID_VIDEO_DESTACADO_1" data-title="Nombre del Destacado 1">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-1.jpg" alt="Destacado 1" loading="lazy">
-              <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <div class="skill-card__icon qa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <div class="tag-group">
+                        <span class="tag">Selenium</span><span class="tag">TestLink</span><span class="tag">Jira</span><span class="tag">Redmine</span><span class="tag">OWASP</span><span class="tag">TDD</span><span class="tag">BDD</span><span class="tag">ISTQB</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon bi">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    </div>
+                    <h3>Business Intelligence</h3>
+                    <div class="tag-group">
+                        <span class="tag">Power BI</span><span class="tag">ETL</span><span class="tag">PL-SQL</span><span class="tag">T-SQL</span><span class="tag">Oracle</span><span class="tag">SQL Server</span><span class="tag">Control-M</span><span class="tag">.NET</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon dev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3>Desarrollo</h3>
+                    <div class="tag-group">
+                        <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">C#</span><span class="tag">Java</span><span class="tag">HTML</span><span class="tag">CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card__icon ops">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg>
+                    </div>
+                    <h3>Metodologías</h3>
+                    <div class="tag-group">
+                        <span class="tag">Scrum</span><span class="tag">DevOps</span><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Git</span><span class="tag">GitHub</span>
+                    </div>
+                </div>
             </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 1</h3>
-              <p>Texto breve describiendo este logro o momento destacado.</p>
-            </div>
-          </button>
-
-          <!-- DESTACADO 2 — VIDEO -->
-          <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://www.youtube.com/embed/REEMPLAZAR_ID_VIDEO_DESTACADO_2" data-title="Nombre del Destacado 2">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-2.jpg" alt="Destacado 2" loading="lazy">
-              <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 2</h3>
-              <p>Texto breve describiendo este logro o momento destacado.</p>
-            </div>
-          </button>
-
-          <!-- DESTACADO 3 — SOLO TEXTO/IMAGEN -->
-          <div class="carousel__card carousel__card--static">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-3.jpg" alt="Destacado 3" loading="lazy">
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 3</h3>
-              <p>Texto breve describiendo este logro o reconocimiento.</p>
-            </div>
-          </div>
-
-          <!-- DESTACADO 4 — SOLO TEXTO/IMAGEN -->
-          <div class="carousel__card carousel__card--static">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-4.jpg" alt="Destacado 4" loading="lazy">
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 4</h3>
-              <p>Texto breve describiendo este logro o reconocimiento.</p>
-            </div>
-          </div>
-
-          <!-- DESTACADO 5 — SOLO TEXTO/IMAGEN -->
-          <div class="carousel__card carousel__card--static">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-5.jpg" alt="Destacado 5" loading="lazy">
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 5</h3>
-              <p>Texto breve describiendo este logro o reconocimiento.</p>
-            </div>
-          </div>
-
-          <!-- DESTACADO 6 — SOLO TEXTO/IMAGEN -->
-          <div class="carousel__card carousel__card--static">
-            <div class="carousel__img-wrap">
-              <img src="img/destacados/destacado-6.jpg" alt="Destacado 6" loading="lazy">
-            </div>
-            <div class="carousel__body">
-              <h3>Nombre del Destacado 6</h3>
-              <p>Texto breve describiendo este logro o reconocimiento.</p>
-            </div>
-          </div>
-
         </div>
+    </section>
 
-        <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Siguiente" data-carousel-next="highlights">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Experiencia</h2>
+
+            <div class="timeline">
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista de Soporte TI</h3>
+                                <p class="timeline__company">S3Chile · Banchile Corredores de Seguros</p>
+                            </div>
+                            <span class="timeline__date">Sept 2025 – Presente</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Soporte de usuarios sobre los sistemas de la corredora de seguros, gestionando el levantamiento, análisis y mitigación de incidentes.</li>
+                            <li>Creación y mantención de productos y planes de seguros en entorno productivo.</li>
+                            <li>Manejo de SQL para tareas diarias de análisis de incidentes, revisión de la creación de productos en entorno QA y productivo, creación de mitigantes y corrección de datos.</li>
+                            <li>Coordinar correcciones con áreas técnicas y de negocio, asegurando la continuidad operativa de los sistemas.</li>
+                            <li>Gestión y control de accesos de usuarios en múltiples sistemas de la corredora de seguros.</li>
+                            <li>Liderazgo de equipo de QA en la creación y mantención de productos y planes de seguros en entorno QA.</li>
+                            <li>Monitoreo y supervisión de pruebas relacionado a los productos de seguros en entorno QA.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Seguros</span><span class="tag">Análisis TI</span><span class="tag">PL-SQL</span><span class="tag">T-SQL</span><span class="tag">QA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista de TI</h3>
+                                <p class="timeline__company">S3Chile · Banchile Corredores de Seguros</p>
+                            </div>
+                            <span class="timeline__date">Abr 2022 – Presente</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Creación y mantención de productos y planes de seguros en entornos QA y productivo.</li>
+                            <li>Control diario de detección y análisis de incidentes en plataformas de la corredora de seguros.</li>
+                            <li>Ejecución de QA para nuevos desarrollos y correcciones de incidentes.</li>
+                            <li>Certificación de procesos mediante Control-M.</li>
+                            <li>Manejo de ETL, PL-SQL y T-SQL en tareas asignadas.</li>
+                            <li>Diseño de reportes estratégicos y dashboards dinámicos en Power BI.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Seguros</span><span class="tag">Análisis TI</span><span class="tag">PL-SQL</span><span class="tag">T-SQL</span><span class="tag">Power BI</span><span class="tag">Control-M</span><span class="tag">QA</span><span class="tag">ETL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Capacitador de Automatización & Analista QA</h3>
+                                <p class="timeline__company">QualityFactory · Ecomsur</p>
+                            </div>
+                            <span class="timeline__date">May 2021 – Ene 2022</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Capacité a profesionales de Ecomsur en testing y automatización de pruebas para los proyectos WMS, OMS y diversos marketplaces de sus clientes bajo metodologías ágiles.</li>
+                            <li>Supervisé la realización de pruebas del equipo QA.</li>}
+                            <li>Ejecuté pruebas y generé informes de evidencia e incidencias.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Automatización</span><span class="tag">QA</span><span class="tag">Capacitador</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Docente Taller de Robótica</h3>
+                                <p class="timeline__company">Duoc UC · Liceo Politécnico Andes</p>
+                            </div>
+                            <span class="timeline__date">Oct 2021 – Dic 2021</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Impartí clases de robótica a estudiantes del Liceo Politécnico Andes, fundación Duoc UC.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Docencia</span><span class="tag">Robótica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista QA</h3>
+                                <p class="timeline__company">Quality Factory · Aguas Andinas</p>
+                            </div>
+                            <span class="timeline__date">Oct 2019 – Mar 2020</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Aseguré el desarrollo seguro de software conforme a OWASP Top 10 para el Proyecto Suez Environment.</li>
+                            <li>Codifiqué detección automatizada de líneas de código vulnerables basada en OWASP.</li>
+                            <li>Elaboré planes de prueba e informes de hallazgos para el aseguramiento del desarrollo.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">OWASP</span><span class="tag">Seguridad</span><span class="tag">Automatización</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista QA</h3>
+                                <p class="timeline__company">Quality Factory · Servicio de Impuestos Internos (SII)</p>
+                            </div>
+                            <span class="timeline__date">Oct 2015 – Ene 2016</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Revisé documentación funcional y elaboré pautas y casos de prueba para el proyecto “Solicitud Devolución Cambio Sujeto”.</li>
+                            <li>Ejecuté pruebas y generé informes de evidencia e incidencias.</li>
+                            <li>Gestioné mantenciones asignadas mediante Jira.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Jira</span><span class="tag">Funcional</span><span class="tag">Reporting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista QA</h3>
+                                <p class="timeline__company">Quality Factory</p>
+                            </div>
+                            <span class="timeline__date">Ago 2015 – Sept 2015</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Realicé el taller de entrenamiento ISTQB FOUNDATION. </li>
+                            <li>Fui parte de la traducción del OWASP TOP10 (castellano).</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">ISTQB</span><span class="tag">OWASP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__card">
+                        <div class="timeline__header">
+                            <div>
+                                <h3 class="timeline__role">Analista QA</h3>
+                                <p class="timeline__company">Datactiva · Servicio Nacional de Aduanas</p>
+                            </div>
+                            <span class="timeline__date">Dic 2014 – Ago 2015</span>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Elaboré planes y casos de prueba a partir de documentación funcional para proyecto de migración de plataformas SIDEMAR, DECARE y versión de BD Oracle.</li>
+                            <li>Ejecuté pruebas y redacté informes de testing.</li>
+                            <li>Gestioné el workflow de seguimiento de bugs mediante Redmine.</li>
+                        </ul>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Funcional</span><span class="tag">Redmine</span><span class="tag">Oracle</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section--alt" id="education">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Educación</h2>
+            <p class="edu__hint">Toca cualquier título para ver el certificado</p>
+            <div class="edu__grid">
+                <button type="button" class="edu__card" data-cert="img/certificado-ingenieria.png" data-title="Ingeniería en Informática">
+                    <div class="edu__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                    </div>
+                    <div class="edu__content">
+                        <h3>Ingeniería Informática</h3>
+                        <p class="edu__school">Duoc UC</p>
+                        <span class="edu__date">2018 – 2021</span>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Nota 6,5</span>
+                        </div>
+                    </div>
+                    <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg> Ver título</span>
+                </button>
+                <button type="button" class="edu__card" data-cert="img/certificado-analista.png" data-title="Analista Programador Computacional">
+                    <div class="edu__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                    </div>
+                    <div class="edu__content">
+                        <h3>Analista Programador Computacional</h3>
+                        <p class="edu__school">Duoc UC</p>
+                        <span class="edu__date">2018 – 2020</span>
+                        <div class="tag-group tag-group--sm">
+                            <span class="tag">Nota 6,3</span>
+                        </div>
+                    </div>
+                    <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg> Ver título</span>
+                </button>
+                <button type="button" class="edu__card" data-cert="img/certificado-telecomunicaciones.png" data-title="Técnico de Nivel Medio en Telecomunicaciones">
+                    <div class="edu__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" /></svg>
+                    </div>
+                    <div class="edu__content">
+                        <h3>Técnico en Telecomunicaciones — Redes y Programación</h3>
+                        <p class="edu__school">Liceo Politécnico Andes, fundación Duoc UC</p>
+                        <span class="edu__date">2011 – 2014</span>
+                    </div>
+                    <span class="edu__view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg> Ver título</span>
+                </button>
+            </div>
+
+            <div class="award">
+                <div class="award__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" /></svg>
+                </div>
+                <div>
+                    <h3>Reconocimiento FemIT</h3>
+                    <p>Premio de la comunidad FemIT dentro del programa <strong>"Más Mujeres en las TICs"</strong> — líder en concientización sobre el rol de la mujer en la industria tecnológica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+      ════════════════════════════════════════════════════════════
+      SECCIÓN PROYECTOS — guía para reemplazar placeholders
+      ════════════════════════════════════════════════════════════
+      Cada tarjeta es un <button class="carousel__card"> con 3 atributos data-*:
+
+        data-media-type   = "video" | "doc" | "link"
+                             "video" → abre modal con reproductor embebido (YouTube/Drive)
+                             "doc"   → abre modal mostrando documento embebido (Google Drive/PDF)
+                             "link"  → abre el repositorio de GitHub en una pestaña nueva (sin modal)
+
+        data-media-src    = URL del video/documento embebido, o del repo si es type="link"
+                             Para YouTube: usa el link de "Insertar" tipo
+                               https://www.youtube.com/embed/ID_DEL_VIDEO
+                             Para Google Drive (video o doc): usa el link de "Insertar"
+                               https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview
+                             Para GitHub (type="link"): la URL normal del repo
+                               https://github.com/TU_USUARIO/nombre-repo
+
+        data-title        = Título que aparece en el modal
+
+      La imagen (data-img / <img src>) es la miniatura de la tarjeta — usa tus propias imágenes en img/proyectos/
+      Hay 7 tarjetas de ejemplo: 3 video, 2 doc, 2 link. Reemplaza textos, imágenes y links según corresponda.
+    -->
+    <section class="section" id="projects">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Proyectos</h2>
+            <p class="section__subtitle">Una selección de trabajos, demos y repositorios.</p>
+
+            <div class="carousel" data-carousel="projects">
+                <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Anterior" data-carousel-prev="projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+
+                <div class="carousel__track" id="projectsTrack">
+
+                    <!-- PROYECTO 1 — VIDEO -->
+                    <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://drive.google.com/file/d/1cO2e_6_IGGJTZwyp7y1tdefQHVCXMoX2/preview" data-title="Restaurante Siglo XXI">
+                        <div class="carousel__img-wrap">
+                            <img src="img/proyectos/proyecto-1.png" alt="Proyecto 1" loading="lazy">
+                            <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Portafolio de Titulo Ingeniería en Informática</h3>
+                            <p>Realice la creación de la base de datos, la parte web del proyecto y documentación.</p>
+                            <span class="carousel__tag carousel__tag--video">Video</span>
+                        </div>
+                    </button>
+
+                    <!-- PROYECTO 2 — VIDEO -->
+                    <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://drive.google.com/file/d/1J7dlJDN7E-8hb9xGeZJa1gjd45xZU4DR/preview" data-title="Yuyitos">
+                        <div class="carousel__img-wrap">
+                            <img src="img/proyectos/proyecto-2.jpg" alt="Proyecto 2" loading="lazy">
+                            <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Portafolio de Titulo Analista Programador</h3>
+                            <p>Realice toda la doumentación, el sistema web y la base de datos.</p>
+                            <span class="carousel__tag carousel__tag--video">Video</span>
+                        </div>
+                    </button>
+
+                    <!-- PROYECTO 3 — VIDEO -->
+                    <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://drive.google.com/file/d/1NqC071Rl2UlM_s5ieLxSed89-fM06I2k/preview" data-title="BigData">
+                        <div class="carousel__img-wrap">
+                            <img src="img/proyectos/proyecto-3.jpg" alt="Proyecto 3" loading="lazy">
+                            <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>BigData con Power BI</h3>
+                            <p>Prueba de BigData con el uso de Power BI.</p>
+                            <span class="carousel__tag carousel__tag--video">Video</span>
+                        </div>
+                    </button>
+
+                    <!-- PROYECTO 4 — VIDEO -->
+                    <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://drive.google.com/file/d/1bX1fO8o4RRC_u7EEglwcGMC40wck6cWE/preview" data-title="Mockup">
+                        <div class="carousel__img-wrap">
+                            <img src="img/proyectos/proyecto-4.jpg" alt="Proyecto 3" loading="lazy">
+                            <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Mockup Web</h3>
+                            <p>Mockup Web de sistema de bicicletas compartidas.</p>
+                            <span class="carousel__tag carousel__tag--video">Video</span>
+                        </div>
+                    </button>
+
+                    <!-- PROYECTO 5 — REPOSITORIO GITHUB -->
+                    <button type="button" class="carousel__card" data-media-type="link" data-media-src="https://github.com/CristalD/OnBreak" data-title="OnBreak">
+                        <div class="carousel__img-wrap">
+                            <img src="img/proyectos/repo-1.png" alt="Repositorio 1" loading="lazy">
+                            <span class="carousel__play carousel__play--link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.135.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>OnBreak sistema de Escritorio</h3>
+                            <p>Sistema de escritorio desarrollado con C# y .NET.</p>
+                            <span class="carousel__tag carousel__tag--link">GitHub</span>
+                        </div>
+                    </button>
+
+            
+                </div>
+
+                <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Siguiente" data-carousel-next="projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--
+      ════════════════════════════════════════════════════════════
+      SECCIÓN DESTACADOS — guía para reemplazar placeholders
+      ════════════════════════════════════════════════════════════
+      6 tarjetas en total. Mismo sistema data-* que Proyectos:
+        - 2 tarjetas con data-media-type="video" (abren modal con reproductor embebido)
+        - 4 tarjetas con data-media-type="none" (solo muestran texto + imagen, sin modal — son informativas)
+      Si alguna tarjeta "none" no debe ser clicable, puedes quitarle el atributo onclick dejándola como <div> en vez de <button>.
+    -->
+    <section class="section section--alt" id="highlights">
+        <div class="section__inner">
+            <h2 class="section__title"><span class="accent">#</span> Destacados</h2>
+            <p class="section__subtitle">Logros, reconocimientos y momentos clave.</p>
+
+            <div class="carousel" data-carousel="highlights">
+                <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Anterior" data-carousel-prev="highlights">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+
+                <div class="carousel__track" id="highlightsTrack">
+
+                    <!-- DESTACADO 1 — VIDEO -->
+                    <button type="button" class="carousel__card" data-media-type="link" data-media-src="https://www.youtube.com/watch?v=9dLybyRPHqM" data-title="Más Mujeres en las TICS">
+                        <div class="carousel__img-wrap">
+                            <img src="img/destacados/destacado-1.png" alt="Destacado 1" loading="lazy">
+                            <span class="carousel__play carousel__play--link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Presentación del Programa Más Mujeres en las TICS</h3>
+                            <p>Participación en la creación del programa Más Mujeres en las TICS junto con CITT DUOC UC y docentes.</p>
+                            <span class="carousel__tag carousel__tag--link">Ver en YouTube</span>
+                        </div>
+                    </button>
+                    <!-- DESTACADO 2 — INSTAGRAM -->
+                    <button type="button" class="carousel__card" data-media-type="instagram" data-media-src="https://www.instagram.com/p/CN-bzi7nA7C/" data-title="Publicación de Instagram">
+                        <div class="carousel__img-wrap carousel__img-wrap--instagram">
+                            <img src="img/destacados/instagram-3.jpg" alt="Publicación de Instagram de Ingeniosas" loading="lazy">
+                            <span class="carousel__play carousel__play--instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Publicación de Ingeniosas</h3>
+                            <p>En el #DíadelasniñasenlasTIC comparto en qué consiste mi carrera y la importancia de que más mujeres participen del mundo de las TIC</p>
+                            <span class="carousel__tag carousel__tag--instagram">Instagram</span>
+                        </div>
+                    </button>
+
+                    <!-- DESTACADO 3 — INSTAGRAM -->
+                    <button type="button" class="carousel__card" data-media-type="instagram" data-media-src="https://www.instagram.com/p/DYVXF6UEdYb/" data-title="Publicación de Instagram">
+                        <div class="carousel__img-wrap carousel__img-wrap--instagram">
+                            <img src="img/destacados/instagram-1.jpg" alt="Publicación de Instagram de la institución Duoc UC" loading="lazy">
+                            <span class="carousel__play carousel__play--instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Charla en DUOC UC</h3>
+                            <p>Junto a compañeros titulados impartimos la charla “Ctrl+Alt+Del:Reinicia tu versión profesional: lo que nadie te dice antes de trabajar".</p>
+                            <span class="carousel__tag carousel__tag--instagram">Instagram</span>
+                        </div>
+                    </button>
+
+                    <!-- DESTACADO 4 — INSTAGRAM (placeholder: reemplaza data-media-src con tu segundo link) -->
+                    <button type="button" class="carousel__card" data-media-type="instagram" data-media-src="https://www.instagram.com/p/CRAfW3uNRUt/" data-title="Publicación de Instagram">
+                        <div class="carousel__img-wrap carousel__img-wrap--instagram">
+                            <img src="img/destacados/instagram-2.jpg" alt="Publicación de Instagram de Más Mujeres en las TICS" loading="lazy">
+                            <span class="carousel__play carousel__play--instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Taller de Mas Mujeres en las TICS</h3>
+                            <p>Junto a mi compañera impartimos un taller de introducción a la inteligencia artificial.</p>
+                            <span class="carousel__tag carousel__tag--instagram">Instagram</span>
+                        </div>
+                    </button>
+
+                    <!-- DESTACADO 5 — INSTAGRAM (placeholder: reemplaza data-media-src con tu segundo link)  -->
+                    <button type="button" class="carousel__card" data-media-type="instagram" data-media-src="https://www.instagram.com/p/Bpk5fEPnfKB/" data-title="Publicación de Instagram">
+                        <div class="carousel__img-wrap carousel__img-wrap--instagram">
+                            <img src="img/destacados/instagram-4.jpg" alt="Publicación de Instagram de Ingeniosas" loading="lazy">
+                            <span class="carousel__play carousel__play--instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Voluntariado en Ingeniosas</h3>
+                            <p>Apoyo como coordinadora de experiencia tecnológicas para casi mil niñas de colegios.</p>
+                            <span class="carousel__tag carousel__tag--instagram">Instagram</span>
+                        </div>
+                    </button>
+                    <!-- DESTACADO EXTRA — VIDEO DESDE GOOGLE DRIVE -->
+                    <button type="button" class="carousel__card" data-media-type="video" data-media-src="https://drive.google.com/file/d/1Nnzui_YbfF-011aKjpLhUqYiLkSPiXpi/preview" data-title="Titulación">
+                        <div class="carousel__img-wrap">
+                            <img src="img/destacados/destacado-drive-1.png" alt="Destacado" loading="lazy">
+                            <span class="carousel__play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Titulación Duoc UC</h3>
+                            <p>Realice la charla de la ceremonia de titulación como la titulada representante.</p>
+                            <span class="carousel__tag carousel__tag--link">Ver Video</span>
+                        </div>
+                    </button>
+                    <!-- DESTACADO 6 — SOLO TEXTO/IMAGEN -->
+                    <div class="carousel__card carousel__card--static">
+                        <div class="carousel__img-wrap">
+                            <img src="img/destacados/destacado-6.jpg" alt="Destacado 6" loading="lazy">
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Cursos Cortos DUOC UC</h3>
+                            <p>Impartí ayundatías para estudientes de los Cursos Cortos sobre informática y telecomunicaciones.</p>
+                        </div>
+                    </div>
+                    <!-- DESTACADO 7 — INSTAGRAM (placeholder: reemplaza data-media-src con tu segundo link)  -->
+                    <button type="button" class="carousel__card" data-media-type="instagram" data-media-src="https://www.instagram.com/p/CG27dcQFsXt/" data-title="Publicación de Instagram">
+                        <div class="carousel__img-wrap carousel__img-wrap--instagram">
+                            <img src="img/destacados/instagram-5.jpg" alt="Publicación de Instagram de Más Mujeres en las TICS" loading="lazy">
+                            <span class="carousel__play carousel__play--instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg></span>
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Taller de Mas Mujeres en las TICS</h3>
+                            <p>Junto a mi compañera impartimos un taller de ¿Quien dice que programar no es divertido?, Aprende jugando.</p>
+                            <span class="carousel__tag carousel__tag--instagram">Instagram</span>
+                        </div>
+                    </button>
+                    <!-- DESTACADO 8 — SOLO TEXTO/IMAGEN -->
+                    <div class="carousel__card carousel__card--static">
+                        <div class="carousel__img-wrap">
+                            <img src="img/destacados/destacado-7.jpg" alt="Destacado 8" loading="lazy">
+                        </div>
+                        <div class="carousel__body">
+                            <h3>Reconocimiento Mujeres en STEM</h3>
+                            <p>Reconocimiento desde el ministerio de educación junto con ingeniosas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Siguiente" data-carousel-next="highlights">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="section__inner section__inner--center">
+            <h2 class="section__title"><span class="accent">#</span> Contacto</h2>
+            <p class="section__subtitle">¿Tienes un proyecto en mente o quieres conectar? ¡Escríbeme!</p>
+            <div class="contact__cards">
+                <a href="mailto:dqacristal@gmail.com" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <span>dqacristal@gmail.com</span>
+                </a>
+                <a href="tel:+56950839340" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    <span>+56 9 5083 9340</span>
+                </a>
+                <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATE MODAL -->
+    <div class="cert-modal" id="certModal" aria-hidden="true">
+        <div class="cert-modal__backdrop" id="certModalBackdrop"></div>
+        <div class="cert-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+            <div class="cert-modal__header">
+                <h3 id="certModalTitle">Certificado</h3>
+                <button type="button" class="cert-modal__close" id="certModalClose" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <div class="cert-modal__body">
+                <img id="certModalImg" src="" alt="Certificado de título">
+            </div>
+        </div>
+    </div>
+
+    <!-- MEDIA MODAL (videos y documentos de Proyectos/Destacados) -->
+    <div class="cert-modal" id="mediaModal" aria-hidden="true">
+        <div class="cert-modal__backdrop" id="mediaModalBackdrop"></div>
+        <div class="cert-modal__dialog cert-modal__dialog--media" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+            <div class="cert-modal__header">
+                <h3 id="mediaModalTitle">Título</h3>
+                <button type="button" class="cert-modal__close" id="mediaModalClose" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <div class="cert-modal__body cert-modal__body--media" id="mediaModalBody">
+                <iframe id="mediaModalFrame" src="" title="Contenido multimedia" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div id="instagramEmbedContainer" class="instagram-embed-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Hecho con <span class="heart">♥</span> por Cristal Campino · Santiago, Chile · 2026</p>
+    </footer>
+
+    <!-- MINI MUSIC PLAYER (flotante) -->
+    <div class="music-player">
+        <audio id="bgAudio" src="audio/Wada Kouji - The Biggest Dreamer.mp3" preload="none" loop></audio>
+        <button type="button" class="music-player__btn" id="musicToggle" aria-label="Reproducir música" aria-pressed="false">
+            <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+            <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
+            <span class="music-player__bars" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </span>
         </button>
-      </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section__inner section__inner--center">
-      <h2 class="section__title"><span class="accent">#</span> Contacto</h2>
-      <p class="section__subtitle">¿Tienes un proyecto en mente o quieres conectar? ¡Escríbeme!</p>
-      <div class="contact__cards">
-        <a href="mailto:dqacristal@gmail.com" class="contact-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span>dqacristal@gmail.com</span>
-        </a>
-        <a href="tel:+56950839340" class="contact-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <span>+56 9 5083 9340</span>
-        </a>
-        <a href="https://www.linkedin.com/in/cristal-angelica-campino-saavedra-99b86b112" target="_blank" rel="noopener" class="contact-card">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATE MODAL -->
-  <div class="cert-modal" id="certModal" aria-hidden="true">
-    <div class="cert-modal__backdrop" id="certModalBackdrop"></div>
-    <div class="cert-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-      <div class="cert-modal__header">
-        <h3 id="certModalTitle">Certificado</h3>
-        <button type="button" class="cert-modal__close" id="certModalClose" aria-label="Cerrar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <div class="cert-modal__body">
-        <img id="certModalImg" src="" alt="Certificado de título">
-      </div>
-    </div>
-  </div>
-
-  <!-- MEDIA MODAL (videos y documentos de Proyectos/Destacados) -->
-  <div class="cert-modal" id="mediaModal" aria-hidden="true">
-    <div class="cert-modal__backdrop" id="mediaModalBackdrop"></div>
-    <div class="cert-modal__dialog cert-modal__dialog--media" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
-      <div class="cert-modal__header">
-        <h3 id="mediaModalTitle">Título</h3>
-        <button type="button" class="cert-modal__close" id="mediaModalClose" aria-label="Cerrar">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-      <div class="cert-modal__body cert-modal__body--media">
-        <iframe id="mediaModalFrame" src="" title="Contenido multimedia" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Hecho con <span class="heart">♥</span> por Cristal Campino · Santiago, Chile · 2026</p>
-  </footer>
-
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
